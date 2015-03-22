@@ -3,7 +3,7 @@ AlgoliaSearchBundle
 
 This Symfony bundle provides an easy way to integrate Algolia Search into your Symfony2 with Doctrine2 application.
 
-[![Build Status](https://travis-ci.org/algolia/AlgoliaSearchBundle.svg?branch=master)](https://travis-ci.org/algolia/AlgoliaSearchBundle)
+[![Build Status](https://travis-ci.org/djfm/AlgoliaSearchBundle.svg?branch=master)](https://travis-ci.org/djfm/AlgoliaSearchBundle)
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
@@ -88,7 +88,7 @@ use Algolia\AlgoliaSearchBundle\Mapping\Annotation as Algolia;
  * Product
  *
  * @ORM\Entity
- * 
+ *
  */
 class Product
 {
@@ -105,9 +105,9 @@ class Product
      * @var string
      *
      * @ORM\Column(name="name", type="string", length=255)
-     * 
+     *
      * @Algolia\Attribute
-     * 
+     *
      */
     protected $name;
 
@@ -115,7 +115,7 @@ class Product
      * @var float
      *
      * @ORM\Column(name="price", type="decimal", nullable=true)
-     * 
+     *
      */
     protected $price;
 
@@ -164,7 +164,7 @@ You can change this behaviour with the `Index` annotation and the `autoIndex` pa
  *
  * @ORM\Entity
  * @Algolia\Index(autoIndex=false)
- * 
+ *
  */
 class Product
 {
@@ -202,7 +202,7 @@ To disable this feature, use the `perEnvironment` option of the `Index` annotati
  *
  * @ORM\Entity
  * @Algolia\Index(perEnvironment=false)
- * 
+ *
  */
 class Product
 {
@@ -222,7 +222,7 @@ To this end, we provide the `IndexIf` annotation. This annotation can only be us
  *
  * @ORM\Entity
  * @Algolia\Index(perEnvironment=false)
- * 
+ *
  */
 class Product
 {
@@ -262,7 +262,7 @@ This will return an array of hits, wrapped inside of a [SearchResult](SearchResu
 
 This will not connect to the local database.
 
-## Performing a native search 
+## Performing a native search
 
 You can retrieve Doctrine entities from Algolia indexes using the `search` method of the indexer:
 
